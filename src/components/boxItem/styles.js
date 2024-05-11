@@ -6,9 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 10px;
+  position: relative;
   display: flex;
   height: 150px;
-  position: relative;
   padding: 25px;
   width: 100%;
   gap: 5px;
@@ -52,8 +52,6 @@ export const Container = styled.div`
   & > section > h4:nth-child(1) {
     font-weight: 100;
   }
-
-  
 `;
 
 export const StatusContainer = styled.div`
@@ -65,12 +63,9 @@ export const StatusContainer = styled.div`
 
   & > section {
     position: relative;
-    
     height: 100%;  
     width: auto;
   }
-
-  
 `;
 
 export const StatusLine = styled.div`
@@ -80,13 +75,9 @@ export const StatusLine = styled.div`
   cursor: pointer;
   height: 100%;
   width: 8px;
-
-  
 `;
 
-
 export const StatusInfo = styled.div`
-
 background-color: #e5e5e5;
 box-sizing: border-box;
 text-align: center;
@@ -101,20 +92,23 @@ top: 100%;
 gap: 10px;
   
 ${StatusLine}:hover + & {
-  display: flex;
   flex-direction: column;
+  display: flex;
 }
 
 & > h1, p {
-  color: #000;
-  width: 100%;
   text-align:start;
+  width: 100%;
+  color: #000;
 }
 
 & > h1 {
   font-size: 1rem;
 }
+
   & > p {
     font-size: 0.8rem;
   }
 `
+
+

@@ -6,10 +6,6 @@ import { Container, StatusContainer, StatusLine, StatusInfo } from "./styles";
 const BoxItem = ({ title }) => {
   const [data, setData] = useState([]);
 
-const [date, setDate] = useState("")
-const [status, setStatus] = useState("")
-const [responseTime, setResponseTime] = useState("")
-
   
   const getStatus = async () => {
     const response = await api.get("/ping/get");
@@ -35,8 +31,10 @@ const [responseTime, setResponseTime] = useState("")
 
       {data.map((item, index) => {
         return (
+          <>
+          
           <StatusContainer key={index}>
-            {item.historic.slice(0, 60).map((historicItem, historicIndex) => (
+            {item.historic.slice(item.historic.length - 72, item.historic.length).map((historicItem, historicIndex) => (
               <section key={historicIndex}>
                 
                 <StatusLine
@@ -47,13 +45,15 @@ const [responseTime, setResponseTime] = useState("")
                 
 
                 <StatusInfo>
-                  <h1>{FormatData(historicItem.date)}</h1>
-                  <p>Status da API: {historicItem.status}</p>
-                  <p>Tempo de Resposta: {historicItem.responseTime}ms</p>
+                  <h1>{FormatData(historicItem?.date)}</h1>
+                  <p>Status da API: {historicItem?.status}</p>
+                  <p>Tempo de Resposta: {historicItem?.responseTime}ms</p>
                 </StatusInfo>
               </section>
             ))}
           </StatusContainer>
+           
+          </>
         );
       })}
       
