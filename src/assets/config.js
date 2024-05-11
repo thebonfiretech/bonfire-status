@@ -1,4 +1,3 @@
 export default {
-    pageTitle: "react-vite-template",
-    baseURL: "" 
+    pageTitle: "Bonfire Status"
 }

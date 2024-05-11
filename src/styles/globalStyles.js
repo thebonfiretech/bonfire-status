@@ -5,8 +5,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
- scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 p, a, h1 {
   color: ${({theme}) => theme.colors.text};
@@ -20,7 +19,7 @@ body {
     background-color: #363636;
 }
 ::-webkit-scrollbar {
-    width: 6px;
+    display: none;
   
    
 }
