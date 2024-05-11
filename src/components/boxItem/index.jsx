@@ -18,8 +18,17 @@ const BoxItem = ({ title }) => {
   }, []);
 
   const FormatData = (dataString) => {
-    const dataObj = new Date(dataString);
-    return dataObj.toLocaleDateString();
+      const dataObj = new Date(dataString);
+      const options = {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          timeZone: 'UTC'
+      };
+      return dataObj.toLocaleString('pt-BR', options); 
   };
 
   return (
@@ -34,10 +43,11 @@ const BoxItem = ({ title }) => {
           <>
           
           <StatusContainer key={index}>
-            {item.historic.slice(item.historic.length - 72, item.historic.length).map((historicItem, historicIndex) => (
-              <section key={historicIndex}>
+            {item.historic.slice(item.historic.length - 60, item.historic.length).map((historicItem, historicIndex) => (
+              <>
                 
                 <StatusLine
+                  key={historicIndex}
                   status={historicItem.status}
                   isSuccess={historicItem.isSuccess}
                   data={historicItem}
@@ -48,8 +58,9 @@ const BoxItem = ({ title }) => {
                   <h1>{FormatData(historicItem?.date)}</h1>
                   <p>Status da API: {historicItem?.status}</p>
                   <p>Tempo de Resposta: {historicItem?.responseTime}ms</p>
+                  
                 </StatusInfo>
-              </section>
+              </>
             ))}
           </StatusContainer>
            

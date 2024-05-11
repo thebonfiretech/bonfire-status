@@ -1,44 +1,39 @@
 
-# React Vite Template
+# Bonfire Status
 
-Um template criado facilitar a vida do desenvolvedor, ele iniciante ou não, tal template reuni as principais tecnlogias para o react e já vem configurado para desenvolvimento e build.
+Sistema elaborado para monitoramento dos demais serviços do Bonfire, como apis, websites, microserviços, entre outros. Busca trazer para o cliente facilidade no acompanhamento de estabilidade dentro do sistema. 
 
+## Acesse o sistema 
+[status.thebonfire.tech](https://status.thebonfire.tech/)
 
-## Bibliotecas utilizadas
+## Funcionalidades
+
+- Atualizaçao em tempo real da estabilidade de todos nossos sistemas.
+- Monitoramento geral a cada 5 minutos.
+- Historico de estabilidade dos sistemas.
+
+## Ferramentas utilizadas
 - styled-componentes
 - react-router-dom
 - react
 - axios
 - Vite
 
-
-
-## Funcionalidades
-
-- Vite configurado (build, port, .env, scripts)
-- Theme Provider
-- Global Styles
-- Arquivo de configuração geral (title, baseURL)
-- Rotas configuradas
-- Rota de erro configurada
-- Estrutura de pastas
-- Instancia do axios
-
-
-
+## Acesso repositorio backend
+[bonfire-status-api](https://github.com/thebonfiretech/bonfire-status-api)
 
 ## Rodando localmente
 
 Clone o projeto
 
 ```bash
-  git clone https://github.com/DARKnx/react-vite-template.git
+  git clone https://github.com/thebonfiretech/bonfire-status.git
 ```
 
 Entre no diretório do projeto
 
 ```bash
-  cd react-vite-template
+  cd bonfire-status
 ```
 
 Instale as dependências
@@ -61,8 +56,3 @@ Para fazer o deploy desse projeto rode
 ```bash
   npm run build
 ```
-
-## Autor
-
-- [@darknx](https://www.github.com/darknx)
-

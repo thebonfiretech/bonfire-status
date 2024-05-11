@@ -32,6 +32,7 @@ const Status = () => {
 
       <Box>
         {statusBox.map((statusItem, index) => {
+      
          return <BoxItem key={index} title={statusItem.name}/>;
         })}
       </Box>

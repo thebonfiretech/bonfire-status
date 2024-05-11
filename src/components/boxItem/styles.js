@@ -10,8 +10,12 @@ export const Container = styled.div`
   display: flex;
   height: 150px;
   padding: 25px;
-  width: 100%;
+  width: 60vw;
   gap: 5px;
+
+@media (max-width: 768px) {
+  width: 80vw;
+}
 
   & > section {
     justify-content: space-between;
@@ -55,26 +59,30 @@ export const Container = styled.div`
 `;
 
 export const StatusContainer = styled.div`
+  box-sizing: border-box;
+  gap: calc(30vw / 67);
   flex-direction: row;
   display: flex;
   height: 50px;
-  width: 100%;
-  gap: 4px;
+  width: 60vw;
 
-  & > section {
-    position: relative;
-    height: 100%;  
-    width: auto;
+  @media (max-width: 768px) {
+    gap: calc(40vw / 77);
+    width: 80vw;
   }
 `;
 
 export const StatusLine = styled.div`
   background-color: ${({ theme, isSuccess }) => isSuccess ? theme.colors.tertiaryBackground : 
   theme.colors.error};
+  width: calc(30vw / 60);
   position: relative;
   cursor: pointer;
   height: 100%;
-  width: 8px;
+
+  @media (max-width: 768px) {
+    width: calc(40vw / 60);
+  }
 `;
 
 export const StatusInfo = styled.div`

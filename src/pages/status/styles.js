@@ -42,9 +42,9 @@ export const Header = styled.div`
 export const Box = styled.div`
   border-radius: 10px;
   height: auto;
-  width: 60%;
+  width: 60vw;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 80vw;
   }
 
 `;
