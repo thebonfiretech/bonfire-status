@@ -39,6 +39,7 @@ const BoxItem = ({ title }) => {
       </section>
 
       {data.map((item, index) => {
+        console.log(item)
         return (
           <>
           
@@ -69,9 +70,7 @@ const BoxItem = ({ title }) => {
       })}
       
       <section>
-        <h4>90 dias atrás</h4>
-        <h4>100% em atividade</h4>
-        <h4>Hoje</h4>
+
       </section>
     </Container>
   );
