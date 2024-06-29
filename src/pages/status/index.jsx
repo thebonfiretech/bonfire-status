@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Container, Header, Message, Box } from "./styles";
 
+import image  from "../../../public/images/logo.svg";
 import api from "../../services/api";
 
 import BoxItem from "../../components/boxItem";
@@ -22,7 +23,7 @@ const Status = () => {
   return (
     <Container>
       <Header>
-        <img src="../../../public/images/logo.svg" />
+        <img src={image} />
         <h1>Bonfire</h1>
       </Header>
 
