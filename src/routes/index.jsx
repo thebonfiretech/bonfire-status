@@ -11,7 +11,6 @@ import Status from '../pages/status'
           <Route path="*" element={<Navigate to="/" replace/>}/>
           <Route path="/404" element={<Error />}/>
           <Route path="/" element={<Status />}/>
-          <Route path="/main" element={<Main />}/>
         </Routes>
       </BrowserRouter>
     )

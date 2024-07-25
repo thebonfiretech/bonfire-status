@@ -13,9 +13,7 @@ const Status = () => {
   const getStatus = async () => {
     const response = await api.get("/ping/get");
     setStatusBox(response.data);
-
   };
-
   
   useEffect(() => {
     getStatus();

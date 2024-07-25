@@ -43,10 +43,10 @@ export const Box = styled.div`
   border-radius: 10px;
   height: auto;
   width: 60vw;
+  
   @media (max-width: 768px) {
     width: 80vw;
   }
-
 `;
 
 export const Message = styled.div`
