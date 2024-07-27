@@ -18,6 +18,7 @@ const Status = () => {
   useEffect(() => {
     getStatus();
   }, []);
+  
   return (
     <Container>
       <Header>
