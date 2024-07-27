@@ -10,21 +10,16 @@ export const Container = styled.div`
   display: flex;
   height: 150px;
   padding: 25px;
-  width: 60vw;
   gap: 5px;
 
-@media (max-width: 768px) {
-  width: 80vw;
-}
-
-  & > section {
+  & > article {
     justify-content: space-between;
     align-items: center;
     display: flex;
     width: 100%;
   }
 
-  & > section > h1 {
+  & > article > h1 {
     text-transform: capitalize;
     font-size: 20px;
 
@@ -33,7 +28,7 @@ export const Container = styled.div`
     }
   }
 
-  & > section > h3 {
+  & > article > h3 {
     font-size: 16px;
     color: #0697c5;
 
@@ -42,7 +37,7 @@ export const Container = styled.div`
     }
   }
 
-  & > section > h4 {
+  & > article > h4 {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 12px;
@@ -53,59 +48,54 @@ export const Container = styled.div`
     }
   }
 
-  & > section > h4:nth-child(1) {
+  & > article > h4:nth-child(1) {
     font-weight: 100;
   }
 `;
 
 export const StatusContainer = styled.div`
   box-sizing: border-box;
-  gap: calc(30vw / 67);
+
   flex-direction: row;
   display: flex;
+  box-sizing: border-box;
   height: 50px;
-  width: 60vw;
+  gap: 4px;
+  width: 100%;
 
-  @media (max-width: 768px) {
-    gap: calc(40vw / 77);
-    width: 80vw;
-  }
 `;
 
 export const StatusLine = styled.div`
-  background-color: ${({ theme, isSuccess }) => isSuccess ? theme.colors.tertiaryBackground : 
-  theme.colors.error};
-  width: calc(30vw / 60);
+  background-color: ${({ theme, isSuccess }) => isSuccess ? theme.colors.tertiaryBackground :
+    theme.colors.error};
+  width: 100%;
   position: relative;
   cursor: pointer;
   height: 100%;
-
-  @media (max-width: 768px) {
-    width: calc(40vw / 60);
-  }
 `;
 
 export const StatusInfo = styled.div`
+transform: translateX(-50%);
 background-color: #e5e5e5;
 box-sizing: border-box;
 text-align: center;
 border-radius: 5px;
-position: absolute; 
-margin-top: 15px;
+position: absolute;
 height: 150px;
 padding: 15px;
-display:none;
+display: none;
 width: 300px;
-top: 100%;
 gap: 10px;
-  
+left: 50%;
+top: 75%;
+
 ${StatusLine}:hover + & {
   flex-direction: column;
-  display: flex;
+  display: block;
 }
 
 & > h1, p {
-  text-align:start;
+  text-align: start;
   width: 100%;
   color: #000;
 }
