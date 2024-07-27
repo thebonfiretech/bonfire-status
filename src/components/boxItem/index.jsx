@@ -49,9 +49,8 @@ const BoxItem = ({ title }) => {
       const date = item.date.split("T")[0];
       if (!filteredHistoric[date]) filteredHistoric[date] = { isSuccess: 0, isError: 0 };
       const old = filteredHistoric[date];
-      filteredHistoric[date] = { isSuccess: old.isSuccess + (item.isSuccess ? 1 : 0), isError: old.isError + (item.isSuccess ? 0 : 1) }
-      const current =  filteredHistoric[date];
-      filteredHistoric[date] = { ...current, date, responseTime: item.responseTime, status: item.status, percentage: ((current.isSuccess / (current.isSuccess + current.isError)) * 100) }
+      const current =  { isSuccess: old.isSuccess + (item.isSuccess ? 1 : 0), isError: old.isError + (item.isSuccess ? 0 : 1) };
+      filteredHistoric[date] = { ...current, date, percentage: ((current.isSuccess / (current.isSuccess + current.isError)) * 100) }
     });
     return filteredHistoric;
   };
@@ -69,7 +68,7 @@ const BoxItem = ({ title }) => {
             Object.values(filterHistoric(item.historic)).map((historicItem, historicIndex) => (
               <React.Fragment key={historicIndex}>
               <StatusLine
-                status={historicItem.status}
+                status={historicItem.status || ""}
                 isSuccess={historicItem.isSuccess}
                 data={historicItem}
               />
