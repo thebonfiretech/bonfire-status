@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Container, Header, Message, Box } from "./styles";
 
-import image  from "../../../public/images/logo.svg";
+import image from "../../../public/images/logo.svg";
 import api from "../../services/api";
 
 import BoxItem from "../../components/boxItem";
@@ -14,10 +14,11 @@ const Status = () => {
     const response = await api.get("/ping/get");
     setStatusBox(response.data);
   };
-  
+
   useEffect(() => {
     getStatus();
   }, []);
+
   return (
     <Container>
       <Header>
@@ -31,8 +32,7 @@ const Status = () => {
 
       <Box>
         {statusBox.map((statusItem, index) => {
-      
-         return <BoxItem key={index} title={statusItem.name}/>;
+          return <BoxItem key={index} title={statusItem.name}/>;
         })}
       </Box>
     </Container>
