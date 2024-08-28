@@ -18,6 +18,10 @@ const Status = () => {
   useEffect(() => {
     getStatus();
   }, []);
+   if (import.meta.env.MODE === 'development') {
+    // Use chaves de desenvolvimento ou outras configurações
+    console.log(import.meta.env.MODE);
+  } 
 
   return (
     <Container>
