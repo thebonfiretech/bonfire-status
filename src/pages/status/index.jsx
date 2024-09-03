@@ -5,6 +5,7 @@ import { Container, Header, Message, Box } from "./styles";
 import image from "../../../public/images/logo.svg";
 import api from "../../services/api";
 
+
 import BoxItem from "../../components/boxItem";
 
 const Status = () => {
